@@ -20,7 +20,7 @@ export const menuClose = () => {
   menu.innerHTML = "arrow_right_alt";
   if (!main) return;                          // ← guard
   main.style.filter = "blur(0px)";
-  if(mainWidth >= 768){
+  if(mainWidth >= 768 && mainWidth < 1024){
   main.style.marginLeft = "0px";
   main.style.width = "100%";
   mainContainer.style.padding ="0px"
@@ -45,7 +45,7 @@ export const menuUpdate = () => {
     if(mainWidth >= 768 ){
       main.style.width = `calc(100% - ${w}px)`;
       main.style.marginLeft = `${w}px`;
-      mainContainer.style.padding ="15px"
+      mainContainer.style.padding ="10px"
     
     }
 
