@@ -1,0 +1,455 @@
+:root {
+    --primary-color: #111822;--accent-color: #e54d41;--text-color:#eee;
+}
+body{
+    margin: 0;padding: 0;background-color: var(--primary-color);display: flex;flex-direction: column;overflow-x: hidden;
+}
+/* ------HEADER START SECTION------- */
+
+.header-container{
+  width: 100%;box-shadow:  0 0 5px #0009;margin: 0;padding: 5px;height: 50px;position: sticky;top: 0;background-color: var(--primary-color);z-index: 10;display: block;box-sizing: border-box;
+}
+.header{
+    display: flex;background-color: var(--primary-color);align-items: center;margin: 0;top: 0;width: 100%; padding-top: 5px;justify-content: space-between;
+}
+.logo-container{
+  flex-basis: 200px;
+}
+.menu{
+  color: var(--text-color);
+  cursor: pointer;
+  
+  user-select: none;
+}
+
+.genre-container{
+  flex-grow: 1;
+  justify-content: center;
+  margin-right: 30px;
+  display: grid;
+  max-width: 220px;
+  height: calc(100dvh - 105px);
+  grid-template-rows: repeat(5,70px);
+  background-color: var(--primary-color);
+  width: 0;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  overflow: hidden;
+  justify-items: center;
+  z-index: 10;
+  padding-top: 50px;
+  box-shadow: 0 0 5px #3003;
+  transition: width .3s ease;
+
+}
+
+
+.genre-link-container{
+  margin: 5px;
+  padding: 14px;user-select: none;position: relative;
+}
+.genre-link-container a{
+  font-size: 20px;
+}
+.genre-link-container .link{
+  text-decoration: none;color: var(--text-color);user-select: none;
+}
+
+.login{
+    color: var(--text-color);background-color: var(--accent-color);padding: 10px 30px;border-radius: 8px;margin: 0 20px;cursor: pointer;text-decoration: none;user-select: none;
+}
+
+.login:hover{
+    opacity: .5;
+}
+.header-end{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-basis: 100px;
+}
+
+.twiter-container a{
+    color: #eee;text-decoration: none;
+}
+.twiter-container {
+  display: none;
+}
+.search{
+    color: var(--text-color);margin: 0 15px;user-select: none;cursor: pointer;
+}
+.searcher{
+    border: none;outline: none;background-color: transparent;color: #ddd;width: 0;transition: width .4s ease-out;display: block;
+}
+.close{
+  width: 160px;
+}
+.searcher::placeholder{
+  color: #aaa;font-size: 15px;
+}
+.form{
+  width: 0px;
+  transition: width .4s ease-out;display: block;
+}
+.container{
+    width: 150px;
+}
+.send-button{
+    display: none;
+}
+/* ------HEADER END SECTION------- */
+
+/* -------MAIN START SECTION------- */
+.main-container{
+    width: 100%;
+    display: flex;
+    margin: 0;
+
+
+}
+
+.main{
+    width: 100%;
+    padding: 0;
+    transition: width .5s ease,margin .5s ease;
+    margin: 0;
+    box-shadow:  0 0 5px #000;
+}
+
+/* -------MAIN END SECTION------- */
+
+/* -------CARRUSEL START SECTION------- */
+.trend-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  margin: auto;
+  height: min-content;
+  width: 100%;
+}
+
+.trend-wrap h2{
+  color: #ddd;
+  align-self: start;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  user-select: none;
+}
+.slider{
+    width: 75%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 10px;
+    height: min-content;
+}
+
+#prev,#next{
+    width: 22px;
+    height: 70px;
+    user-select: none;
+    background-color: var(--text-color);
+    transition: transform .8s ease, opacity .3s ease;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 50px;
+    border: none;
+    box-shadow: 0 0 1px #0009;
+}
+
+#prev{
+  transform: translateX(-200px);
+}
+
+.track{
+    display: grid;
+    grid-template-rows: repeat(1,300px);
+    height: 230px;
+    grid-template-columns: repeat(10,115px);
+    gap: 25px;
+    width: 2000px;
+    margin-top: 20px;width: min-content;
+    transition: transform 1s ease;
+}
+
+
+.slide{
+    height: 200px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    padding: 0;
+    border-radius: 12px;
+    user-select: none;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 5px #0009;
+    user-select: none;
+}
+.slide h2{
+  position: absolute;
+  z-index: 2;
+  font-size: 100px;
+  color: #000;
+  bottom: -10px;
+  left: -10px;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px  1px 0 white,
+    1px  1px 0 white;
+}
+/* -------CARRUSEL END SECTION------- */
+
+/* -------SEPARADOR START SECTION------- */
+.catalogo-container{
+  margin: auto;
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  align-items: center;
+  user-select: none;
+}
+.catalogo-link-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalogo-link{
+  background-color: #48e;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin: 7px 0 20px 0;
+}
+.catalogo-link a{
+color: #ddd;
+text-decoration: none;
+}
+.catalogo-container span{
+  color: #48e;
+
+}
+.catalogo-container h3{
+  text-decoration: none;
+  color: #ddd;
+  font-size: 21px;
+  margin: 0 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.separador{
+  border: 1px solid #ddd;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+
+/* -------ANIME START SECTION------- */
+
+.anime-container{
+  width: 90%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 20px;
+  margin: auto;
+}
+.anime{
+  box-shadow:  -3px 0px 5px #000b00;
+  text-overflow: ellipsis;
+  width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius:12px;
+  position: relative;
+}
+.sinopsis{
+  background-color: #121212;
+  display: none;
+  position: absolute;
+  top: 0;
+  transition: width .3s ease height .3s ease;
+  height: 0px;
+}
+
+.anime h2{
+  text-align: center;
+}
+
+
+.sinopsis h2{
+  margin-top: 10px;
+  display: none;
+  text-wrap: wrap;
+}
+.sinopsis p{
+  text-wrap: wrap;
+  width: 90%;
+  font-size:17px ;
+  font-weight: 600;
+  padding: 0 3px;
+  margin: 5px;
+  color: #fff;
+  text-align: center;
+  display: none;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  transition: height .2s ease;
+  line-clamp: 6;            /* ← Propiedad estándar que pide el editor */
+  overflow: hidden;
+}
+
+.anime img{
+  width: 100%;
+  
+  height: 85%;
+  transition: width .3s ease, height .2s ease;
+}
+
+.anime a{
+  text-decoration: none;
+  color: var(--text-color);
+  user-select: none;
+}
+.anime h3{
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: auto  0 ;
+  padding: 5px 13px;
+  max-width: 100%;
+}
+
+
+
+footer{
+  margin-top: 70px;
+  width: 100%;
+  user-select: none;
+  height: 75px;
+  box-shadow: 0 0 5px #000;
+  background-color: var(--primary-color);
+}
+footer h3{
+  color: #fff;
+  text-align: center;
+}
+.home{
+  color: #ddd;
+  display: none;
+  margin: 10px;
+}
+@media (min-width:768px) {
+  .anime-container{
+  grid-template-columns: repeat(auto-fit, minmax(125px,1fr));
+}
+
+  .track{
+    grid-template-columns: repeat(10,158px);
+    gap: 25px;
+    height: 280px;
+}
+.genre-link-container{
+  margin: 0;
+}
+.slide{
+  height: 230px;
+}
+}
+
+@media (min-width:1024px) {
+  .logo-container{
+  display: none;
+}
+
+    .anime-container{
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  box-sizing: border-box;
+  gap: 30px;
+}
+  .sinopsis{
+    display: block;
+  }
+  .track{
+    grid-template-columns: repeat(10,172px);
+    gap: 35px;
+}
+.anime:hover img{
+  height: 85%;
+}
+.home{
+  color: #ddd;
+  display: flex;
+  margin: 10px;
+}
+
+.anime:hover .sinopsis  {
+  height: 100%;
+  width: 100%;
+}
+.anime:hover .sinopsis p{
+  display: -webkit-box;
+}
+.anime:hover h3 {
+  display: block;
+}
+.anime:hover h2{
+  display: block;
+  font-size: 20px;
+  width: 85%;
+  margin: 13px auto;
+  text-align: center;
+}
+.genre-link-container{
+  margin: 5px 15px;
+}
+.logo-container{
+  flex-basis: 50px;
+}
+.twiter-container {
+  display: flex;
+  margin-right: 20px;
+}
+.header{
+  box-shadow: 0 0 5px #000;
+}
+.header-container{
+  padding: 0;
+  margin-bottom: 20px;
+}
+.genre-container{
+  display: flex;
+  height: 100%;
+  position: relative;
+  padding-top: 0px;
+  box-shadow: none;
+  top: 0;
+  max-width: none;
+}
+.header-end{
+  margin-right: 30px;
+}
+.slide{
+  height: 255px;
+}
+}
+
+@media (min-width:1200px) { 
+      .anime-container{
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+}
+#prev,#next{
+  margin-bottom: 0px;
+}
+}
